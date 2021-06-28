@@ -1,5 +1,6 @@
 const routes = require('express').Router();
 const userRoutes = require('./users');
+const teamRoutes = require('./teams');
 
 routes.post('/', (req, res) => {
   console.log('A new request just hit the API !');
@@ -7,5 +8,6 @@ routes.post('/', (req, res) => {
 });
 
 routes.use('/users', userRoutes);
+routes.use('/teams', teamRoutes);
 
 module.exports = routes;

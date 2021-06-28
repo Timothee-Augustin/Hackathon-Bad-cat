@@ -13,3 +13,20 @@ Content-type: application/json
 ###
 DELETE http://localhost:8000/users/4
 Content-type: application/json
+
+###
+get  http://localhost:8000/teams
+Content-Type: application/json
+
+###
+POST http://localhost:8000/teams
+Content-type: application/json
+
+{
+    "owner_id": "1",
+    "name": "Bad Cat"
+}
+
+###
+DELETE http://localhost:8000/teams/1
+Content-type: application/json

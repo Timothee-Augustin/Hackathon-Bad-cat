@@ -30,3 +30,20 @@ Content-type: application/json
 ###
 DELETE http://localhost:8000/teams/1
 Content-type: application/json
+
+###
+get  http://localhost:8000/projects
+Content-Type: application/json
+
+###
+POST http://localhost:8000/projects
+Content-type: application/json
+
+{
+    "team_id": "2",
+    "title": "Project"
+}
+
+###
+DELETE http://localhost:8000/projects/10
+Content-type: application/json

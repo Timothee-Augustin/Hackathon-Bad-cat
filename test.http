@@ -1,0 +1,15 @@
+get  http://localhost:8000/users
+Content-Type: application/json
+
+###
+POST http://localhost:8000/users
+Content-type: application/json
+
+{
+    "firstname": "John",
+    "lastname": "Doe"
+}
+
+###
+DELETE http://localhost:8000/users/4
+Content-type: application/json

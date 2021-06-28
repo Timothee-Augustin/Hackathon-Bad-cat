@@ -1,11 +1,29 @@
+require('dotenv').config();
+
 const express = require('express');
-const serverPort = 8000;
-// init the express app
+const connection = require('./db-config');
+const routes = require('./routes');
+
 const app = express();
-// define the index route
-app.get('/', (req, res) => {
- console.log('A new request just hit the API !');
- res.send('Hello dear API client :)');
+
+const port = process.env.PORT || 8000;
+
+connection.connect((err) => {
+  if (err) {
+    console.error(`error connecting: ${err.stack}`);
+  } else {
+    console.log(`connected to database with threadId :  ${connection.threadId}`);
+  }
 });
-// listen to incoming requests
-app.listen(serverPort, () => console.log('Express server is running'));
+
+app.use(express.json());
+
+
+
+app.use(routes);
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+module.exports = app;

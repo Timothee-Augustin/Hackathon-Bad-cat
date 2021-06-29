@@ -24,5 +24,6 @@ function App() {
         <Navbar />
       </LoginDataProvider>
     </div>
+  )};
 
 export default App;

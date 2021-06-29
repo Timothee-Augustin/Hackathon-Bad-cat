@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TeamForm from "../components/TeamForm";
 import { useLoginData } from '../contexts/LoginDataContext';
 
 function Profile() {
   const { loginData } = useLoginData();
   const [teams, setTeams] = useState([]);
-  React.useEffect(() => {
+  useEffect(() => {
     if (loginData != null) {
       const url = `http://localhost:8000/teams`;
       fetch(url)

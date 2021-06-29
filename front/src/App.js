@@ -17,11 +17,11 @@ function App() {
       <BrowserRouter>
       <div className="main">
         <Routes />
-      </div>
-      </BrowserRouter>
+      </div>      
       <div className="footer">
         <Navbar />
       </div>
+      </BrowserRouter>
     </div>
     </LoginDataProvider>
   )

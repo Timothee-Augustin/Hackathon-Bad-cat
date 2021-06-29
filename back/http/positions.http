@@ -1,8 +1,8 @@
 ###
-GET http://localhost:5000/positions
+GET http://localhost:8000/positions
 
 ###
-POST http://localhost:5000/positions
+POST http://localhost:8000/positions
 Content-Type: application/json
 
 {
@@ -13,4 +13,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/positions/1
+DELETE http://localhost:8000/positions/1

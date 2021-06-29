@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { useLoginData } from '../contexts/LoginDataContext';
 
-function TeamForm() {
-  const { loginData, setLoginData } = useLoginData();
+function TeamForm( { teams, setTeams }) {
+  const { loginData } = useLoginData();
   const nameInput = useRef();
+    
   return (
     <div className="formContainer">
       <h1>
@@ -34,8 +35,9 @@ function TeamForm() {
               body: JSON.stringify(team),
             };
             fetch('http://localhost:8000/teams', config).then((res) => res.json()).then((data) => {
-              console.log(data);
-          });            
+              setTeams((previousTeams) => ([...previousTeams, data]))    
+          }); 
+                 
             }}
         >
           Create

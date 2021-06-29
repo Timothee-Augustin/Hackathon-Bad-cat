@@ -3,7 +3,7 @@ import { LoginDataProvider } from './contexts/LoginDataContext';
 import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
-import TeamForm from "./components/TeamForm";
+import Profile from './pages/Profile'
 import Logo from './images/fiverr-community-logo-200.png';
 import './App.css';
 
@@ -22,8 +22,8 @@ function App() {
       <LoginDataProvider>
         <Login />
         <Chat />
-        <TeamForm />
-        {/* <Navbar /> */}
+        <Profile />
+        <Navbar />
       </LoginDataProvider>
     </div>
   )}

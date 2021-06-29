@@ -1,6 +1,7 @@
 import { LoginDataProvider } from './contexts/LoginDataContext';
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
+import Profile from './pages/Profile'
 import Logo from './images/fiverr-community-logo-200.png';
 import './App.css';
 

@@ -1,15 +1,17 @@
-import React, { useState } from "react";
 import "./App.css";
 import ButtonCreateTeam from "./components/ButtonCreateTeam";
+import { LoginDataProvider } from './contexts/LoginDataContext';
 import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
 
 function App() {
-  return ( 
-   <div className="App">
+  return (    
+    <LoginDataProvider>
+      <Login />
       <Chat />
       <Navbar />
-    </div>
+    </LoginDataProvider>
   );
 }
 export default App;

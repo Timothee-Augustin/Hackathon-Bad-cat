@@ -65,3 +65,12 @@ Content-type: application/json
 ###
 DELETE http://localhost:8000/positions/10
 Content-type: application/json
+
+###
+POST http://localhost:8000/login
+Content-type: application/json
+
+{
+    "firstname": "Timothee",
+    "lastname": "Augustin"
+}

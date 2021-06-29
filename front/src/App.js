@@ -1,5 +1,7 @@
 import { LoginDataProvider } from './contexts/LoginDataContext';
 import Navbar from "./components/Navbar";
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './pages/Routes';
 import Login from "./pages/Login";
 import Profile from './pages/Profile'
 import Logo from './images/fiverr-community-logo-200.png';
@@ -12,9 +14,11 @@ function App() {
       <div className="header">
         <img src={Logo} className="fiverr-community-logo-200" alt="fiverr-community-logo-200" />
       </div>
+      <BrowserRouter>
       <div className="main">
-        <Login />
+        <Routes />
       </div>
+      </BrowserRouter>
       <div className="footer">
         <Navbar />
       </div>

@@ -1,7 +1,6 @@
 const positionRoutes = require('express').Router();
 const db = require('../db-config');
 
-
 positionRoutes.get('/', (req, res) => {
   db.query('SELECT * from position', (err, results) => {
     if (err) {
@@ -31,19 +30,19 @@ positionRoutes.post('/', (req, res) => {
 });
 
 positionRoutes.delete('/:id', (req, res) => {
-    const positionId = req.params.id;
-    db.query(
-      'DELETE FROM position WHERE id = ?',
-      [positionId],
-      (err, results) => {
-        if (err) {
-          console.log(err);
-          res.status(500).send('Error deleting a position');
-        } else {
-          res.status(200).send('Position deleted!');
-        }
-      },
-    );
-  });
+  const positionId = req.params.id;
+  db.query(
+    'DELETE FROM position WHERE id = ?',
+    [positionId],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send('Error deleting a position');
+      } else {
+        res.status(200).send('Position deleted!');
+      }
+    },
+  );
+});
 
 module.exports = positionRoutes;

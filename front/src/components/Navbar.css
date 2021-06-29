@@ -1,21 +1,23 @@
 .navbar {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(72, 255, 0);
-  border: blueviolet 1px solid;
+  background-color: whitesmoke;
   justify-content: space-around;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
+
 .profil {
   width: 35px;
   padding: 15px 10px;
 }
+
 .chat {
   width: 35px;
   padding: 15px 10px;
 }
+
 .loupe {
   width: 35px;
   padding: 15px 10px;

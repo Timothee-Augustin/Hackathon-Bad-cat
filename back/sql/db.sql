@@ -29,7 +29,7 @@ CREATE TABLE `team` (
 
 CREATE TABLE `position` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `position` varchar(155) NOT NULL,
+    `name` varchar(155) NOT NULL,
     `user_id` int,
     `team_id` int NOT NULL,
     PRIMARY KEY(`id`),
@@ -41,7 +41,7 @@ CREATE TABLE `position` (
 
 CREATE TABLE `project` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `team_id` int NOT NULL,
+    `team_id` int,
     `title` varchar(155) NOT NULL,
     PRIMARY KEY(`id`),
     CONSTRAINT FK_ProjetTeam FOREIGN KEY (team_id)

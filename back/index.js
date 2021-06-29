@@ -1,11 +1,18 @@
+require('dotenv').config();
+
 const express = require('express');
-const serverPort = 8000;
-// init the express app
+const cors = require('cors');
+const routes = require('./routes');
 const app = express();
-// define the index route
-app.get('/', (req, res) => {
- console.log('A new request just hit the API !');
- res.send('Hello dear API client :)');
+const port = process.env.PORT || 8000;
+
+app.use(express.json());
+app.use(cors());
+
+app.use(routes);
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
-// listen to incoming requests
-app.listen(serverPort, () => console.log('Express server is running'));
+
+module.exports = app;

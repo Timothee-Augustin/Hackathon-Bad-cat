@@ -1,3 +1,8 @@
+import ButtonCreateTeam from "./components/ButtonCreateTeam";
+import { LoginDataProvider } from './contexts/LoginDataContext';
+import Chat from "./components/Chat";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
 import Logo from './images/fiverr-community-logo-200.png';
 import './App.css';
 
@@ -13,8 +18,11 @@ function App() {
       <div className="navBar">
         navBar
       </div>
+      <LoginDataProvider>
+        <Login />
+        <Chat />
+        <Navbar />
+      </LoginDataProvider>
     </div>
-  );
-}
 
 export default App;

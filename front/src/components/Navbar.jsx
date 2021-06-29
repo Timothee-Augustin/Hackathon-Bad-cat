@@ -1,11 +1,10 @@
 import React from 'react';
-import profil from "../img/profil.png";
-import chat from "../img/chat.png";
-import loupe from "../img/loupe.png";
-import "../css/Navbar.css";
+import profil from "../images/profil.png";
+import chat from "../images/chat.png";
+import loupe from "../images/loupe.png";
+import "./Navbar.css";
 
-
-function h1() {
+function Navbar() {
     return (
         <div className="navbar">            
             <img className="profil" src={profil} alt="Profil" />
@@ -15,4 +14,4 @@ function h1() {
     )
 }
 
-export default h1
+export default Navbar;

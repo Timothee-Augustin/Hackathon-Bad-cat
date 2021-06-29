@@ -1,6 +1,6 @@
 
 
-.child2 {
+.formContainer{
     display: flex;
     flex-direction: column;
 }
@@ -9,14 +9,14 @@
     color: darkslategray;
 }
 
-.inputFirstname {
+.inputTeam{
     border: none;
     border-radius: 0.5em;
     width: 19em;
     height: 3em;
 }  
 
-.labelLastname {
+.labelTeam{
     color: darkslategray;
 }
 
@@ -27,7 +27,7 @@
     height: 3em;
 }
 
-.ButtonLogin {
+.btnTeam {
     display: inline-block;
     border-radius: 0.5em;
     background-color: darkslategray;
@@ -43,14 +43,14 @@
     align-self: center;
 }
 
-.ButtonLogin span {
+.btnTeam span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.ButtonLogin span:after {
+.btnTeam span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -59,11 +59,11 @@
     transition: 0.5s;
 }
 
-.ButtonLogin:hover span {
+.btnTeam:hover span {
     padding-right: 25px;
 }
 
-.ButtonLogin:hover span:after {
+.btnTeam:hover span:after {
     opacity: 1;
     right: 0;
 }

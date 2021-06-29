@@ -4,6 +4,8 @@ import React, { useRef } from 'react';
 
 import { useLoginData } from '../contexts/LoginDataContext';
 
+import './Login.css';
+
 // const link = (path, text) => <NavLink to={path} exact activeClassName="active" className="link">{text}</NavLink>;
 
 function Login() {
@@ -47,7 +49,9 @@ function Login() {
             });
           }}
         >
-          Login
+        <span>
+          Login 
+        </span>
         </button>
       </div>
       )}

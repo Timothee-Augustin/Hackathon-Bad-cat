@@ -1,7 +1,6 @@
 .navbar {
   display: flex;
   flex-wrap: wrap;
-  background-color: whitesmoke;
   justify-content: space-around;
   position: fixed;
   bottom: 0;

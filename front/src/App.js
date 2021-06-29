@@ -13,6 +13,10 @@ function App() {
         <img src={Logo} className="fiverr-community-logo-200" alt="fiverr-community-logo-200" />
       </div>
       <div className="main">
+      <h1>
+      Welcome !
+      Please log !
+      </h1>
         <Login />
       </div>
       <div className="footer">

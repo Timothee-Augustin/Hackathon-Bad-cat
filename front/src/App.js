@@ -1,13 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import ButtonCreateTeam from "./components/ButtonCreateTeam";
+import Chat from "./components/Chat";
 
 function App() {
-  return (
-    <div>
-      <ButtonCreateTeam />
-    </div>
-  );
+  return <Chat />;
 }
-
 export default App;

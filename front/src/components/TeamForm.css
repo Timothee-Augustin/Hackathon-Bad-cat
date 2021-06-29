@@ -1,0 +1,69 @@
+
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.labelLogin {
+    color: darkslategray;
+}
+
+.inputTeam{
+    border: none;
+    border-radius: 0.5em;
+    width: 19em;
+    height: 3em;
+}  
+
+.labelTeam{
+    color: darkslategray;
+}
+
+.inputLastname {
+    border: none;
+    border-radius: 0.5em;
+    width: 19em;
+    height: 3em;
+}
+
+.btnTeam {
+    display: inline-block;
+    border-radius: 0.5em;
+    background-color: darkslategray;
+    border: none;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.7em;
+    width: 7em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1em;
+    align-self: center;
+}
+
+.btnTeam span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btnTeam span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btnTeam:hover span {
+    padding-right: 25px;
+}
+
+.btnTeam:hover span:after {
+    opacity: 1;
+    right: 0;
+}

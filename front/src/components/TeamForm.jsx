@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useLoginData } from '../contexts/LoginDataContext';
+import "./TeamForm.css";
 
 function TeamForm( { teams, setTeams }) {
   const { loginData } = useLoginData();
@@ -15,8 +16,9 @@ function TeamForm( { teams, setTeams }) {
       <div className="TeamForm">
         <label className="labelTeam" htmlFor="owner">Owner</label>
         <label className="inputTeam" type="text" id="text" name="text"  required>{' '}{loginData[0].firstname}</label>
+        <br/>
         <label className="labelTeam" htmlFor="name">team name</label>
-        <input className="inputTeam" ref={nameInput} type="text" id="text" name="text" placeholder="Team" required />        
+        <input className="inputTeam" ref={nameInput} type="text" id="text" name="text" required />        
       </div>
       <div className="btnContainer">
         <button

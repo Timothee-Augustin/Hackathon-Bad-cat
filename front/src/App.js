@@ -20,9 +20,10 @@ function App() {
       </div>
       <LoginDataProvider>
         <Login />
-        <Chat />
         <Navbar />
       </LoginDataProvider>
     </div>
+  )
+}
 
 export default App;

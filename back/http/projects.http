@@ -1,0 +1,16 @@
+###
+GET http://localhost:5000/projects
+
+###
+POST http://localhost:5000/projects
+Content-Type: application/json
+
+{
+   
+    "team_id":"1",
+    "title": "Create a react/node project for fiverr"
+    
+}
+
+###
+DELETE http://localhost:5000/projects/1

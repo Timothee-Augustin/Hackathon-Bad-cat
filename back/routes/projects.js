@@ -1,7 +1,6 @@
 const projectRoutes = require('express').Router();
 const db = require('../db-config');
 
-
 projectRoutes.get('/', (req, res) => {
   db.query('SELECT * from project', (err, results) => {
     if (err) {
@@ -30,19 +29,19 @@ projectRoutes.post('/', (req, res) => {
 });
 
 projectRoutes.delete('/:id', (req, res) => {
-    const projectId = req.params.id;
-    db.query(
-      'DELETE FROM project WHERE id = ?',
-      [projectId],
-      (err, results) => {
-        if (err) {
-          console.log(err);
-          res.status(500).send('Error deleting a project');
-        } else {
-          res.status(200).send('Project deleted!');
-        }
-      },
-    );
-  });
+  const projectId = req.params.id;
+  db.query(
+    'DELETE FROM project WHERE id = ?',
+    [projectId],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send('Error deleting a project');
+      } else {
+        res.status(200).send('Project deleted!');
+      }
+    },
+  );
+});
 
 module.exports = projectRoutes;

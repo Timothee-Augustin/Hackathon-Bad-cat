@@ -7,17 +7,25 @@ CREATE TABLE `user` (
   `id` int NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,  
   `lastname` varchar(50) NOT NULL,  
+  `skills` varchar(50) NOT NULL,
   PRIMARY KEY(`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT= 1 DEFAULT CHARSET = utf8;
 
 INSERT INTO 
  `user`
 VALUES
-  (1, 'Timothee', 'Augustin'),
-  (2, 'Bastian', 'LeBrun'),
-  (3, 'Thomas', 'Dietrich');
+  (1, 'Timothee', 'Augustin', 'react native dev'),
+  (2, 'Bastian', 'LeBrun', 'film maker'),
+  (3, 'Brian', 'Bertili', 'chef'),
+  (4, 'Hughes', 'Briqueler', 'camera man'),
+  (5, 'Bastian', 'LeBrun', 'node js Dev'),
+  (6, 'Thomas', 'Dietrich', 'singer'),
+  (7, 'Joly', 'Pascal', 'gamer'),
+  (8, 'Majorie', 'Thomassin', 'dancer'),
+  (9, 'Cedric', 'Guyot', 'drummer');
 
-  CREATE TABLE `team` (
+
+CREATE TABLE `team` (
   `id` int NOT NULL AUTO_INCREMENT,
   `owner_id` int NOT NULL,
   `name` varchar(50) NOT NULL,  

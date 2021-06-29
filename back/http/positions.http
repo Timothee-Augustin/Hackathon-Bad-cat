@@ -1,0 +1,16 @@
+###
+GET http://localhost:5000/positions
+
+###
+POST http://localhost:5000/positions
+Content-Type: application/json
+
+{
+    "name":"front dev",
+    "user_id":"1",
+    "team_id": "1"
+    
+}
+
+###
+DELETE http://localhost:5000/positions/1

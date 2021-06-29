@@ -1,7 +1,6 @@
 const userRoutes = require('express').Router();
 const db = require('../db-config');
 
-
 userRoutes.get('/', (req, res) => {
   db.query('SELECT * from user', (err, results) => {
     if (err) {
@@ -17,9 +16,10 @@ userRoutes.post('/', (req, res) => {
   const user = {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
+    skills: req.body.skills,
   };
 
-  db.query('INSERT INTO user (firstname, lastname) VALUES (?, ?)', [user.firstname, user.lastname], (err, results) => {
+  db.query('INSERT INTO user (firstname, lastname, skills) VALUES (?, ?, ?)', [user.firstname, user.lastname, user.skills], (err, results) => {
     if (err) {
       console.log(err);
       res.status(500);
@@ -30,19 +30,19 @@ userRoutes.post('/', (req, res) => {
 });
 
 userRoutes.delete('/:id', (req, res) => {
-    const userId = req.params.id;
-    db.query(
-      'DELETE FROM user WHERE id = ?',
-      [userId],
-      (err, results) => {
-        if (err) {
-          console.log(err);
-          res.status(500).send('Error deleting a user');
-        } else {
-          res.status(200).send('User deleted!');
-        }
-      },
-    );
-  });
+  const userId = req.params.id;
+  db.query(
+    'DELETE FROM user WHERE id = ?',
+    [userId],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send('Error deleting a user');
+      } else {
+        res.status(200).send('User deleted!');
+      }
+    },
+  );
+});
 
 module.exports = userRoutes;

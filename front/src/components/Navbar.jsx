@@ -1,9 +1,8 @@
 import React from 'react';
-import profil from "../img/profil.png";
-import chat from "../img/chat.png";
-import loupe from "../img/loupe.png";
+import profil from "../images/profil.png";
+import chat from "../images/chat.png";
+import loupe from "../images/loupe.png";
 import "./Navbar.css";
-
 
 function Navbar() {
     return (

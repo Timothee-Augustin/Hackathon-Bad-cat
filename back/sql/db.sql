@@ -17,7 +17,7 @@ VALUES
   (2, 'Bastian', 'LeBrun'),
   (3, 'Thomas', 'Dietrich');
 
-  CREATE TABLE `team` (
+CREATE TABLE `team` (
   `id` int NOT NULL AUTO_INCREMENT,
   `owner_id` int NOT NULL,
   `name` varchar(50) NOT NULL,  

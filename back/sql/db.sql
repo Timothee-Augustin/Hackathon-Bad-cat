@@ -6,7 +6,7 @@ USE fiverr;
 CREATE TABLE `user` (
   `id` int NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,  
-  `lasttname` varchar(50) NOT NULL,  
+  `lastname` varchar(50) NOT NULL,  
   PRIMARY KEY(`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT= 1 DEFAULT CHARSET = utf8;
 
@@ -47,6 +47,3 @@ CREATE TABLE `project` (
     CONSTRAINT FK_ProjetTeam FOREIGN KEY (team_id)
     REFERENCES team(id)   
 ) ENGINE = InnoDB AUTO_INCREMENT= 1 DEFAULT CHARSET = utf8;
- 
-
- 

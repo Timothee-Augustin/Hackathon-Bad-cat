@@ -16,9 +16,10 @@ userRoutes.post('/', (req, res) => {
   const user = {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
+    skills: req.body.skills,
   };
 
-  db.query('INSERT INTO user (firstname, lastname) VALUES (?, ?)', [user.firstname, user.lastname], (err, results) => {
+  db.query('INSERT INTO user (firstname, lastname, skills) VALUES (?, ?, ?)', [user.firstname, user.lastname, user.skills], (err, results) => {
     if (err) {
       console.log(err);
       res.status(500);

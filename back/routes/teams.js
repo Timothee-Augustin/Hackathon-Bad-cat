@@ -2,7 +2,7 @@ const teamRoutes = require('express').Router();
 const db = require('../db-config');
 
 teamRoutes.get('/', (req, res) => {
-  db.query('SELECT * from team', (err, results) => {
+  db.query('SELECT * from team INNER JOIN position ON team.id = position.team_id INNER JOIN user ON position.user_id = user.id ', (err, results) => {
     if (err) {
       console.log(err);
       res.status(500);

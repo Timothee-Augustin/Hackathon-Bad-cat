@@ -17,11 +17,28 @@ function Profile() {
       <>
         <TeamForm teams={teams} setTeams={setTeams} />
         { teams && teams.map((team) => (
-          <p>
-            Team :
-            {' '}
-            {team.name}
-          </p>        
+          <>
+            <p>
+              Team :
+              {' '}
+              {team.teamname}
+            </p> 
+            <p>
+              Firstname :
+              {' '}
+              {team.firstname}
+            </p> 
+            <p>
+              Lastname :
+              {' '}
+              {team.lastname}
+            </p>
+            <p>
+              Role :
+              {' '}
+              {team.name}
+            </p> 
+          </>
       ))}
       </>
   );

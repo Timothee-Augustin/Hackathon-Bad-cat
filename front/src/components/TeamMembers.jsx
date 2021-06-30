@@ -1,17 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function TeamMembers ({ id, members, setMembers}) {
-  
+function TeamMembers ({ id }) {
+  const [members, setMembers] = useState([]);
     useEffect(() => {    
           const url = `http://localhost:8000/teams/${id}`;
           fetch(url)
-            .then((res) => res.json()).then((data) => (setMembers(data)));      
-      }, []);
+            .then((res) => res.json()).then((data) => {
+              setMembers(data)
+            })
+            ;   
+           
+      }, [id, setMembers]);
       
     return (
       <>
         {members && members.map((member) => (
           <>
+            <p>
+              Role :
+              {' '}
+              {member.name}
+            </p>
             <p>
               Firstname :
               {' '}
@@ -21,12 +30,7 @@ function TeamMembers ({ id, members, setMembers}) {
               Lastname :
               {' '}
               {member.lastname}
-            </p>
-            <p>
-              Role :
-              {' '}
-              {member.name}
-            </p>
+            </p>            
           </>
         ))}
       </>

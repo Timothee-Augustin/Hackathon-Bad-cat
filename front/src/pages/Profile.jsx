@@ -7,7 +7,7 @@ import { useLoginData } from '../contexts/LoginDataContext';
 function Profile() {
   const { loginData } = useLoginData();
   const [teams, setTeams] = useState([]);
-  const [members, setMembers] = useState([]);
+  
   
   useEffect(() => {
     if (loginData != null) {
@@ -31,7 +31,7 @@ function Profile() {
               {' '}
               {team.teamname}
             </p> 
-            <TeamMembers id={team.id} members={members} setMembers={setMembers} />
+            <TeamMembers id={team.id} />
           </>
       ))}
       </>

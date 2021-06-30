@@ -28,12 +28,16 @@ VALUES
 CREATE TABLE `team` (
   `id` int NOT NULL AUTO_INCREMENT,
   `owner_id` int NOT NULL,
-  `name` varchar(50) NOT NULL,  
+  `teamname` varchar(50) NOT NULL,  
   PRIMARY KEY(`id`),
   CONSTRAINT FK_UserTeam FOREIGN KEY (owner_id)
     REFERENCES user(id)  
 ) ENGINE = InnoDB AUTO_INCREMENT= 1 DEFAULT CHARSET = utf8;
 
+INSERT INTO 
+ `team`
+VALUES
+  (1, 6, 'Bad Cat');
 
 CREATE TABLE `position` (
     `id` int NOT NULL AUTO_INCREMENT,
@@ -46,6 +50,13 @@ CREATE TABLE `position` (
     CONSTRAINT FK_TeamPosition FOREIGN KEY (team_id)
     REFERENCES team(id)   
 ) ENGINE = InnoDB AUTO_INCREMENT= 1 DEFAULT CHARSET = utf8;
+
+INSERT INTO 
+ `position`
+VALUES
+  (1, 'artistic director', 6, 1),
+  (2, 'web developer', 1, 1),
+  (3, 'video maker', 2, 1);
 
 CREATE TABLE `project` (
     `id` int NOT NULL AUTO_INCREMENT,

@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { useLoginData } from '../contexts/LoginDataContext';
+import "./TeamForm.css";
 
-function TeamForm( { teams, setTeams }) {
+function TeamForm({ teams, setTeams, members, setMembers }) {
   const { loginData } = useLoginData();
   const nameInput = useRef();
     
@@ -10,13 +11,13 @@ function TeamForm( { teams, setTeams }) {
       <h1>
         Create your Team
       </h1>
-      {loginData &&(
         <>
       <div className="TeamForm">
         <label className="labelTeam" htmlFor="owner">Owner</label>
         <label className="inputTeam" type="text" id="text" name="text"  required>{' '}{loginData[0].firstname}</label>
+        <br/>
         <label className="labelTeam" htmlFor="name">team name</label>
-        <input className="inputTeam" ref={nameInput} type="text" id="text" name="text" placeholder="Team" required />        
+        <input className="inputTeam" ref={nameInput} type="text" id="text" name="text" required />        
       </div>
       <div className="btnContainer">
         <button
@@ -25,7 +26,7 @@ function TeamForm( { teams, setTeams }) {
           onClick={() => {
             const team = {
               owner_id:loginData[0].id,
-              name: nameInput.current.value,                
+              teamname: nameInput.current.value,                
             };
             const config = {
               method: 'POST',
@@ -37,14 +38,13 @@ function TeamForm( { teams, setTeams }) {
             fetch('http://localhost:8000/teams', config).then((res) => res.json()).then((data) => {
               setTeams((previousTeams) => ([...previousTeams, data]))    
           }); 
-                 
+               
             }}
         >
           Create
         </button>
       </div>
       </>
-      )}
     </div>
   )
 }

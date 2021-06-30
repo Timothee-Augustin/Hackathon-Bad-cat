@@ -28,7 +28,7 @@ Content-type: application/json
 }
 
 ###
-DELETE http://localhost:8000/teams/1
+DELETE http://localhost:8000/teams/9
 Content-type: application/json
 
 ###
@@ -74,3 +74,7 @@ Content-type: application/json
     "firstname": "Timothee",
     "lastname": "Augustin"
 }
+
+###
+get  http://localhost:8000/teams/10
+Content-Type: application/json

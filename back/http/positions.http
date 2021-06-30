@@ -1,16 +1,16 @@
 ###
-GET http://localhost:8000/positions
+GET http://localhost:5000/positions
 
 ###
 POST http://localhost:8000/positions
 Content-Type: application/json
 
 {
-    "name":"front dev",
-    "user_id":"1",
+    "name":"team leader",
+    "user_id":"3",
     "team_id": "1"
     
 }
 
 ###
-DELETE http://localhost:8000/positions/1
+DELETE http://localhost:5000/positions/1

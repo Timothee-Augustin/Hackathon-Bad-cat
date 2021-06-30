@@ -13,10 +13,11 @@ function TeamForm({ teams, setTeams, members, setMembers }) {
       </h1>
         <>
       <div className="TeamForm">
-        <label className="labelTeam" htmlFor="owner">Owner</label>
-        <label className="inputTeam" type="text" id="text" name="text"  required>{' '}{loginData[0].firstname}</label>
-        <br/>
-        <label className="labelTeam" htmlFor="name">team name</label>
+      <div className="owner-div">
+        <label className="labelTeam" htmlFor="owner">Owner :</label>
+        <label className="inputTeam" type="text" id="text" name="text" required>{' '}{loginData[0].firstname}</label>
+      </div>
+        <label className="labelTeam" htmlFor="name">Team name :</label>
         <input className="inputTeam" ref={nameInput} type="text" id="text" name="text" required />        
       </div>
       <div className="btnContainer">

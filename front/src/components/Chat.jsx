@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import io from "socket.io-client";
 import "./Chat.css";
+import cam from "../images/video-call-icon-png.png";
 
 function Chat() {
     const [messages, setMessages] = useState([]);
@@ -23,8 +24,10 @@ function Chat() {
           <div className="col-4">
             <div className="card">
               <div className="card-body">
-                <div className="card-title">ChatRoom</div>
-                <hr />
+              <div className="cam-div">
+                <a href="http://localhost:3000"><img className="cam" src={cam} alt="cam" /></a>
+                <div className="card-title">Chat Room</div>
+              </div>
                 <div className="messages">
                   {messages.map((msg) => {
                     return (
@@ -51,8 +54,8 @@ function Chat() {
                     className="form-control-message"
                   />
                   <br />
-                  <button type="submit" className="btn-send-chat">
-                    send
+                  <button type="submit" className="ButtonLogin">
+                    Send
                   </button>
                 </div>
               </form>

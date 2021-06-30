@@ -5,19 +5,28 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: darkslategray;
 }
 
-.profil {
-  width: 35px;
+.profil, .chat, .loupe {
+  width: 38px;
   padding: 15px 10px;
 }
 
-.chat {
-  width: 35px;
-  padding: 15px 10px;
+.profil:hover, .chat:hover, .loupe:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
-.loupe {
-  width: 35px;
-  padding: 15px 10px;
+.profil:active {
+  content: url("../images/profil-green.png");
+}
+
+.chat:active {
+  content: url("../images/chat-green.png");
+}
+
+.loupe:active {
+  content: url("../images/loupe-green.png");
 }

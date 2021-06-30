@@ -18,15 +18,3 @@
   transition: all 0.3s;
   cursor: pointer;
 }
-
-.profil:active {
-  content: url("../images/profil-green.png");
-}
-
-.chat:active {
-  content: url("../images/chat-green.png");
-}
-
-.loupe:active {
-  content: url("../images/loupe-green.png");
-}

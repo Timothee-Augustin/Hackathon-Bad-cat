@@ -9,7 +9,7 @@ function TeamForm({ teams, setTeams, members, setMembers }) {
   return (
     <div className="formContainer">
       <h1>
-        Create your Team
+        Create your Team !
       </h1>
         <>
       <div className="TeamForm">

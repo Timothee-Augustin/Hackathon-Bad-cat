@@ -9,13 +9,12 @@ function Home() {
 
   return (
     <>
-      <h1>This is the homepage something will be created one day</h1>
-      <p>Connected as {loginData[0].firstname} {loginData[0].lastname}</p>
+      <h1>Connected as {loginData[0].firstname} {loginData[0].lastname} !</h1>
           <button className="ButtonLogin"
           type="button"
           onClick={() => {
             setLoginData()
-          }}>Logout</button>
+          }}><span>Logout</span></button>
     </>
   );
 }

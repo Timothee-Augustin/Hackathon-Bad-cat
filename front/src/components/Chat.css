@@ -1,48 +1,60 @@
+.card {
+  margin: 1em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-title {
     font-size: 2rem;
-    letter-spacing: 2px;
-    color: green;
-  }
+    color: darkslategray;
+    text-align: center;
+}
   
-  .card-footer {
-    padding: 10px 20px;
-    border: solid 1px red;
-    border-radius: 15px;
-    margin: 20px 20px 10px 20px;
-  }
+.card-footer {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
   
   .form-control-username {
-    width: 20%;
-    margin: 10px auto;
+    width: 10em;
+    margin: 1em;
     padding: 1rem 2rem 1rem 2rem;
-    border-radius: 10px;
+    border-radius: 0.5em;
+    border: none;
+    background-color: whitesmoke;
+    margin-top: 2em;
   }
   
   .form-control-message {
     display: block;
-    width: 60%;
-    margin: 0 auto;
+    width: 10em;
     padding: 1rem 2rem 1rem 2rem;
-    border-radius: 10px;
+    border-radius: 0.5em;
+    border: none;
+    background-color: whitesmoke;
   }
-  
-  .btn-send-chat {
-    display: block;
-    width: 15vmin;
-    height: 10vmin;
-    margin: 10px auto;
-    border-radius: 10px;
-    font-size: 1.5rem;
-  }
-  
-  .messages {
-    border: solid 2px black;
-    border-radius: 5px;
-    padding: 10px;
-    width: 80%;
-    height: 28vmax;
-    overflow: auto;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-  
+
+.messages {
+  background-color: whitesmoke;
+  border-radius: 0.5em;
+  width: 12.5em;
+  height: 15em;
+  overflow: auto;
+  margin-top: 1em;
+}
+
+.cam-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.cam {
+  margin: 1em;
+}

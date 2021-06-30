@@ -9,18 +9,30 @@
 }
 
 .inputTeam{
+    color: darkslategray;
     border: none;
     border-radius: 0.5em;
     width: 19em;
     height: 3em;
 }
 
-.labelTeam{
-    color: darkslategray;
+.TeamForm {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+.owner-div {
+    margin: 1em;
+}
+
+.labelTeam{
+    color: darkslategray;
+    margin-bottom: 1em;
+}
+
 .inputLastname {
+    color: darkslategray;
     border: none;
     border-radius: 0.5em;
     width: 19em;
